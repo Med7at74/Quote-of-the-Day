@@ -1,0 +1,121 @@
+/*============================= all section animation when scroll on the webiste  =============================*/
+
+#about,
+/* #team,
+#services, */
+#happy-customer,
+#pricing,
+#contact {
+  animation: animated ease-in-out both;
+  animation-timeline: view();
+  animation-range: entry 50% cover 50%;
+}
+
+@keyframes animated {
+  from {
+    opacity: 0;
+    transform: translateY(6.25rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*============================= home caption animation =============================*/
+
+.carousel-item .heading h1,
+.carousel-item .heading p,
+.carousel-item .heading .heading-buttons {
+  transform: scale(0);
+  transition: 0.3s;
+}
+.carousel-item .heading p {
+  transition-delay: 0.6s;
+}
+.carousel-item .heading .heading-buttons {
+  transition-delay: 0.9s;
+}
+.carousel-item.active .heading h1,
+.carousel-item.active .heading p,
+.carousel-item.active .heading .heading-buttons {
+  transform: scale(1);
+}
+
+/*============================= The Loading Animation =============================*/
+
+.top-layer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #070707;
+  z-index: 999999;
+  animation: top 1.5s;
+  animation-fill-mode: forwards;
+}
+.bottom-layer {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 50%;
+  background-color: #070707;
+  z-index: 999999;
+  animation: bottom 1.5s;
+  animation-fill-mode: forwards;
+}
+
+@keyframes top {
+  from {
+    top: 50%;
+  }
+  to {
+    top: 100%;
+    opacity: 0;
+  }
+}
+
+@keyframes bottom {
+  from {
+    bottom: 50%;
+  }
+  to {
+    bottom: 100%;
+    opacity: 0;
+  }
+}
+
+.loadinng {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60px;
+  height: 60px;
+  background-color: transparent;
+  border-radius: 50%;
+  border: 10px solid;
+  z-index: 9999999999999999999999999999999999;
+  border-color: #fff #fff black #fff;
+  animation: load 1.5s infinite, load2 0.2s 1s;
+  animation-fill-mode: forwards;
+}
+@keyframes load {
+  from {
+    transform: translate(-50%, -50%) rotate(0deg);
+  }
+  to {
+    transform: translate(-50%, -50%) rotate(360deg);
+    opacity: 0;
+  }
+}
+@keyframes load2 {
+  from {
+    display: block;
+  }
+  to {
+    display: none;
+  }
+}

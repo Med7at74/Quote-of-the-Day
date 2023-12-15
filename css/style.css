@@ -1,0 +1,38 @@
+body {
+  background: #d7e7ff;
+}
+section {
+  text-align: center;
+  padding: 100px 0;
+}
+
+h1 {
+  font-size: 80px;
+  font-family: Impact;
+  margin-bottom: 20px;
+}
+
+button {
+  width: 240px;
+  height: 60px;
+  background: #ffffff;
+  border: 1px solid #fff;
+  color: black;
+  transition: all 0.5s;
+  border: none;
+  border-radius: 5px;
+  margin-top: 20px;
+}
+
+p {
+  font-size: 35px;
+}
+
+button:hover {
+  background: lightgray;
+}
+/* .content,
+p {
+  opacity: 0;
+  transition: all 1s;
+} */
